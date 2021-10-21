@@ -32,12 +32,6 @@ let windowWidth;
 
 function getWindowWidth() {
     windowWidth = window.innerWidth || document.body.innerWidth || document.documentElement.innerWidth;
-    console.clear();
-    console.log(windowWidth);
 }
 getWindowWidth();
 window.addEventListener("resize", getWindowWidth);
-
-
-
-// startZooming()
