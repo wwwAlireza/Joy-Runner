@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.d-none {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --main-width: 800px;
+}
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0d1117;
+}
+
+.game-container {
+  margin: 20px auto 0;
+  width: var(--main-width);
+  height: 350px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Press Start 2P", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-transition: margin-top .5s, width .3s, -webkit-transform .5s;
+  transition: margin-top .5s, width .3s, -webkit-transform .5s;
+  transition: transform .5s, margin-top .5s, width .3s;
+  transition: transform .5s, margin-top .5s, width .3s, -webkit-transform .5s;
+}
+
+.game-container .game-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.1rem;
+}
+
+.game-container .game-area {
+  width: 100%;
+  position: relative;
+}
+
+.game-container .game-area #game-character {
+  width: 100px;
+  left: 13px;
+  position: relative;
+  -webkit-transition: bottom .3s;
+  transition: bottom .3s;
+  z-index: 2;
+}
+
+.game-container .game-area #game-barrier {
+  width: 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.game-container .game-area .cloud-area {
+  width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: -230%;
+}
+
+.game-container .game-area .cloud-area .cloud {
+  width: 70px;
+  opacity: .8;
+}
+
+.status-container {
+  width: var(--main-width);
+  font-family: "Press Start 2P", cursive;
+  padding-top: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  position: relative;
+  top: 0;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+}
+
+.status-container #header-text {
+  font-size: 1.6rem;
+  opacity: .8;
+  text-align: center;
+  line-height: 35px;
+}
+
+.status-container .best-score {
+  margin-top: 20px;
+  opacity: .8;
+  font-size: 1.1rem;
+}
+
+.coded-by-container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.coded-by-container .coded-by {
+  position: relative;
+  opacity: .9;
+  width: 240px;
+  height: 30px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  bottom: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 5px;
+  -webkit-transition: bottom .3s, -webkit-box-shadow .3s;
+  transition: bottom .3s, -webkit-box-shadow .3s;
+  transition: bottom .3s, box-shadow .3s;
+  transition: bottom .3s, box-shadow .3s, -webkit-box-shadow .3s;
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 0px 5px 4px rgba(255, 255, 255, 0.2);
+}
+
+.coded-by-container .coded-by .title {
+  font-size: 1.7rem;
+}
+
+.coded-by-container .coded-by .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2px;
+}
+
+.coded-by-container .coded-by .icons img {
+  width: 25px;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.coded-by-container .coded-by .icons img:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.coded-by-container .coded-by:hover {
+  cursor: pointer;
+  bottom: 25px;
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 0px 5px 8px rgba(255, 255, 255, 0.2);
+}
+
+@-webkit-keyframes cloudMove {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes cloudMove {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.cloud-move {
+  -webkit-animation-name: cloudMove;
+          animation-name: cloudMove;
+  -webkit-animation-duration: 15s;
+          animation-duration: 15s;
+  -webkit-animation-delay: 10s;
+          animation-delay: 10s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 810px) {
+  :root {
+    --main-width: 600px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  :root {
+    --main-width: 450px;
+  }
+  #header-text {
+    font-size: 1.4rem !important;
+  }
+  .best-score {
+    margin-top: 7px !important;
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  :root {
+    --main-width: 98%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

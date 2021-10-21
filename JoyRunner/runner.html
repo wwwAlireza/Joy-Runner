@@ -1,0 +1,54 @@
+<!-- 
+    coded by alireza mhm ;
+    github : github.com/wwwAlireza ;
+    codepen : codepen.io/alireza82
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Joy Runner</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="engine/srtyles/main.css">
+    <link rel="shortcut icon" href="content/icons/favicon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-container">
+            <header class="game-header">
+                <div class="score">
+                    <span id="score">0</span>
+                </div>
+            </header>
+            <section class="game-area">
+                <div class="cloud-area cloud-move" style="left: 24%;animation-play-state: paused;">
+                    <img src="content/images/cloud-1.png" class="cloud" alt="cloud" draggable="false">
+                    <img src="content/images/cloud-2.png" class="cloud" alt="cloud" draggable="false">
+                </div>
+                <img id="game-character" style="bottom: 0px" src="content/gifs/character.png" alt="character" draggable="false">
+                <img id="game-barrier" style="left: 60%;" src="content/images/barrier-1.png" alt="barrier" draggable="false">
+            </section>
+        </div>
+        <div class="status-container">
+            <span id="header-text"><span id="game-over-text" class="d-none">Game Over <br></span>Press 'Space' to play</span>
+            <span class="best-score">Best Score: <span id="best-score">0</span></span>
+        </div>
+        <div class="coded-by-container">
+            <div class="coded-by">
+                <span class="title">coded by alireza mhm</span>
+                <div class="icons">
+                    <a href="https://github.com/wwwAlireza/Joy-Runner" target="_blank"><img src="content/icons/github.svg" alt="github"></a>
+                    <div style="padding: 2px;"></div>
+                    <a href="https://codepen.io/alireza82" target="_blank" "><img src="content/icons/codepen.svg " alt="codepen "></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="engine/scripts/sounds.js "></script>
+<script src="engine/scripts/main.js "></script>
+<script src="engine/scripts/zoom.js "></script>
+</html>
